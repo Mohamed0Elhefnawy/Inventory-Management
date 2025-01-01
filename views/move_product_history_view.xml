@@ -1,0 +1,61 @@
+<odoo>
+    <record id="move_product_history_view_tree" model="ir.ui.view">
+        <field name="name">move.product.history.tree</field>
+        <field name="model">move.product.history</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" delete="0" >
+                <field name="user_id"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="type_operation"/>
+                <field name="status"/>
+                <field name="responsible_user"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    <record id="move_product_history_view_form" model="ir.ui.view">-->
+<!--        <field name="name">move.product.history.form</field>-->
+<!--        <field name="model">move.product.history</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <sheet>-->
+<!--                    -->
+<!--                    <div class="oe_title">-->
+<!--                        <label for="product_id"/>-->
+<!--                        <h3>-->
+<!--                            <field name="product_id" />-->
+<!--                        </h3>-->
+<!--                    </div>-->
+<!--                    <group>-->
+<!--                        <group>-->
+<!--                            <field name="operation_type"/>-->
+<!--                            <field name="quantity"/>-->
+<!--                            <field name="responsible_user"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="date"/>-->
+<!--                            <group string="internal transfer">-->
+<!--                                <field name="date"/>-->
+<!--                                <field name="date"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+     <record id="move_product_history_action" model="ir.actions.act_window" >
+        <field name="name" >product history</field>
+        <field name="res_model" >move.product.history</field>
+    </record>
+
+    <menuitem
+            id="menu_move_product_history"
+            name="move product history"
+            parent="operations_menu"
+            action="move_product_history_action"
+    />
+</odoo>
+

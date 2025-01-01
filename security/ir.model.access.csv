@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inventory_product,access_inventory_product,model_inventory_product,,1,1,1,1
+access_inventory_operation,access_inventory_operation,model_inventory_operation,,1,1,1,1
+access_category,access_category,model_category,,1,1,1,1
+access_move_product_history,access_move_product_history,model_move_product_history,,1,1,1,1
+access_location_inventory,access_location_inventory,model_location_inventory,,1,1,1,1

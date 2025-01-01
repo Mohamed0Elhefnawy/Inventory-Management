@@ -1,0 +1,59 @@
+<odoo>
+    <record id="location_inventory_view_tree" model="ir.ui.view">
+        <field name="name">location.inventory.tree</field>
+        <field name="model">location.inventory</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name"/>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="type"/>
+                <field name="parent_id" string="Parent Location"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="location_inventory_view_form" model="ir.ui.view">
+        <field name="name">location.inventory.form</field>
+        <field name="model">location.inventory</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="parent_id"/>
+                        <field name="type"/>
+                        <field name="active"/>
+                        <field name="description"/>
+                    </group>
+                    <notebook>
+                        <page string="Sub Locations">
+                            <field name="child_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="location_action" model="ir.actions.act_window">
+        <field name="name" >location inventory</field>
+        <field name="res_model" >location.inventory</field>
+    </record>
+
+    <menuitem
+            id="menu_configration_location"
+            name="locations"
+            parent="configration_menu"
+            action="location_action"
+    />
+
+</odoo>

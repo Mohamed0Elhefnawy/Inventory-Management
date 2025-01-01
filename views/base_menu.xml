@@ -1,0 +1,26 @@
+<odoo>
+    <menuitem
+        id ="inventory_management_root_menu"
+        name="Inventory Management"
+        web_icon="inventory_management,static\description\icon_inventory.png"
+    />
+
+    <menuitem
+            id="product_menu"
+            name="products"
+            parent="inventory_management_root_menu"
+    />
+
+    <menuitem
+            id="operations_menu"
+            name="operations"
+            parent="inventory_management_root_menu"
+    />
+    <menuitem
+            id="configration_menu"
+            name="configration"
+            parent="inventory_management_root_menu"
+    />
+
+
+</odoo>

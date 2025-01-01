@@ -1,0 +1,8 @@
+@font-face{
+font-family: "SourGummy";
+src: url(inventory_management\static\src\fonts\SourGummy_SemiExpanded-Bold.ttf);
+}
+@font-face {
+font-family: "Doto";
+src: url(/app_one/static/src/fonts/Doto-Black.ttf)
+}
